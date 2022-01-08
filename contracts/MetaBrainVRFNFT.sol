@@ -16,11 +16,9 @@ contract MetaBrainVRFNFT is ERC721, VRFConsumerBase {
     address private VRFCoordinator = 0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B; // Kovan: 0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9
     address private linkToken = 0x01BE23585060835E02B77ef475b0Cc51aA1e0709; // Kovan: 0xa36085F69e2889c224210F603D836748e7dC0088
     bytes32 private keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311; // Kovan: 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4
-    uint256 private fee = 0.1 * 10 ** 18; //0.1 Link
+    uint256 private fee = 0.1 * 10 ** 18; //0.1 LINK
 
     string public baseUri = "ipfs://QmVA4mwKVZ7kqKVnfhRRkg4mBVHaFkMcERdPpsJnVcnLVo/";
-
-    uint256 public tokenId;
 
     mapping(bytes32 => address) public requestToSender; // requestId => sender's address
     mapping(bytes32 => uint256) public requestToTokenId; // requestId => tokenId
